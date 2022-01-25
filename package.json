@@ -24,7 +24,9 @@
     "mongoose": "^6.1.7",
     "nodemailer": "^6.7.2",
     "pino": "^7.6.4",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
