@@ -4,13 +4,14 @@
   "description": "REST API applying DDD and CQRS",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/api/main",
+    "start": "ts-node src/config/server.ts",
     "start:dev": "nodemon -x ts-node src/api/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leonardo Torres",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^17.0.11",
     "@types/nodemailer": "^6.4.4",
     "cors": "^2.8.5",
     "dotenv": "^14.2.0",
@@ -23,6 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",
     "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
     "pino": "^7.6.4",
     "reflect-metadata": "^0.1.13"
   },
