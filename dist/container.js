@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.container = void 0;
+require("reflect-metadata");
+const inversify_1 = require("inversify");
+const server_1 = require("./api/http/server");
+const pino_1 = require("./infra/logging/pino");
+const types_1 = require("./types");
+const health_controller_1 = require("./api/http/controllers/health.controller");
+const container = new inversify_1.Container();
+exports.container = container;
+container.bind(types_1.TYPES.Server).to(server_1.Server).inSingletonScope();
+container.bind(types_1.TYPES.HealthController).to(health_controller_1.HealthController).inSingletonScope();
+container.bind(types_1.TYPES.Logger).to(pino_1.Logger).inSingletonScope();
