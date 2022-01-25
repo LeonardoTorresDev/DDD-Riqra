@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node src/config/server.ts",
     "start:dev": "nodemon -x ts-node src/api/main.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit  1"
   },
   "author": "Leonardo Torres",
   "license": "MIT",
