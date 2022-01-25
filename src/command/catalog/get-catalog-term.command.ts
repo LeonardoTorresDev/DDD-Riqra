@@ -20,5 +20,5 @@ export class GetCatalogByTermCommand implements IGetCatalogByTermCommand {
     async execute(getCatalogTermDTO: GetCatalogTermDTO): Promise<Catalog[]> {
         return this.catalogService.getCatalogByTerm(getCatalogTermDTO.term)
     }
-    
+
 }

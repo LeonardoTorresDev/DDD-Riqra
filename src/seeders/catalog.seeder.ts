@@ -3,8 +3,6 @@ import 'dotenv/config'
 import { connect, disconnect } from 'mongoose'
 import { CatalogModel } from '../infra/mongoose/schemas/catalog.schema'
 
-
-
 let products = [
     new CatalogModel({
         name: "J2",
@@ -57,6 +55,7 @@ async function seed() {
     await connect(String(process.env.MONGO_URI))
     await CatalogModel.insertMany(products)
     console.log("Seeding complete...")
+    disconnect()
 }
 
 async function main() {

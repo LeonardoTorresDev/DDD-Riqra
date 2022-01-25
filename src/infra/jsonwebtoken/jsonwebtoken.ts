@@ -2,12 +2,6 @@ import { decode, sign, verify } from "jsonwebtoken"
 import { injectable } from "inversify"
 import { User } from "../../domain/user"
 
-interface UserPayload {
-    _email: string
-    _password: string
-    _supplier: string
-}
-
 @injectable()
 export class Jsonwebtoken {
 
